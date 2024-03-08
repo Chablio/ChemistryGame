@@ -9,8 +9,6 @@ public class SimpleController : MonoBehaviour
     [SerializeField] private float walk = 15f;
     [SerializeField] private float gravity = 9.81f;
     [SerializeField] private float run = 25f;
-    [SerializeField] private float Jump = 15f;
-
     private float realSpeed;
 
     private CharacterController controller;
