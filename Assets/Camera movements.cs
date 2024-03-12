@@ -3,44 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CameraMove : MonoBehaviour
+public class FirstPersonCamera : MonoBehaviour
 {
-    [Tooltip("Object to follow")]
-    public Transform follow;
-    [Tooltip("Max speed")]
-    public float speed;
+    public float mouseSensitivity = 100f;
+    public Transform playerBody;
 
-    private Vector3 offset;
-    private Vector3 target;
-    private float currentSpeed = 0f;
+    float xRotation = 0f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        // We are not right on top of our target - start by calculating an offset
-        offset = transform.position - follow.position;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Follow();
-    }
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-    // Follow the player
-    private void Follow()
-    {
-        // We do not move right on top of target, but to an offset position
-        target = follow.position + offset;
-        Debug.Log(target);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // Calculate speed based on distance to target - this makes the camera
-        // stop smoothly when approaching its target position.
-        float distance = (target - transform.position).magnitude;
-        currentSpeed = Mathf.Lerp(0, speed, 2 * distance / speed);
-
-        // Move smoothly towards target
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, target, currentSpeed * Time.deltaTime);
-        transform.position = newPosition;
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 }
