@@ -10,17 +10,18 @@ public class HandsMovements : MonoBehaviour
     {
         static void Main()
         {
-            // Create a DataTable with some sample data
+            // TableData
             DataTable table = new DataTable();
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Name", typeof(string));
 
-            // Add some rows to the table
+            // Items on table
             table.Rows.Add(1, "Item 1");
             table.Rows.Add(2, "Item 2");
             table.Rows.Add(3, "Item 3");
             table.Rows.Add(4, "Item 4");
             table.Rows.Add(5, "Item 5");
+            table.Rows.Add(6, "Item 6");
 
             // Call a method to pick an item from the table by its ID
             DataRow pickedItem = PickItemFromTable(table, 3);
@@ -38,7 +39,7 @@ public class HandsMovements : MonoBehaviour
 
         static DataRow PickItemFromTable(DataTable table, int id)
         {
-            // Loop through the rows of the table to find the item with the specified ID
+            // Game Loop
             foreach (DataRow row in table.Rows)
             {
                 if ((int)row["ID"] == id)
