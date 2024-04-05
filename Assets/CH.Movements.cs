@@ -55,11 +55,11 @@ public class SimpleController : MonoBehaviour
             moveDirection = new Vector3(h, 0, v).normalized * realSpeed;
             moveDirection.y = ySpeed;
 
-            // Face in the move direction
-            if (h != 0 || v != 0)
-            {
-                transform.forward = new Vector3(h, 0f, v);
-            }
+            //// Face in the move direction
+            //if (h != 0 || v != 0)
+            //{
+            //    transform.forward = new Vector3(h, 0f, v);
+            //}
         }
 
         // Apply gravity
