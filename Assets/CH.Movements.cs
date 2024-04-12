@@ -53,6 +53,7 @@ public class SimpleController : MonoBehaviour
         {
             float ySpeed = moveDirection.y;
             moveDirection = new Vector3(h, 0, v).normalized * realSpeed;
+            moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.y = ySpeed;
 
             //// Face in the move direction
