@@ -313,9 +313,10 @@ GameObject:
   - component: {fileID: 10023170}
   - component: {fileID: 10023169}
   - component: {fileID: 10023168}
+  - component: {fileID: 10023172}
   m_Layer: 0
   m_Name: c
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,6 +407,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &10023172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10023167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1b3fb1ca212d4418daf57012380446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chemical: Hcl
 --- !u!1 &33898545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6239,9 +6253,10 @@ GameObject:
   - component: {fileID: 1047203575}
   - component: {fileID: 1047203574}
   - component: {fileID: 1047203573}
+  - component: {fileID: 1047203577}
   m_Layer: 0
   m_Name: b
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6332,6 +6347,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047203577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047203572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1b3fb1ca212d4418daf57012380446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chemical: Na
 --- !u!1001 &1055896016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6616,9 +6644,10 @@ GameObject:
   - component: {fileID: 1130170692}
   - component: {fileID: 1130170691}
   - component: {fileID: 1130170690}
+  - component: {fileID: 1130170694}
   m_Layer: 0
   m_Name: a
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6709,6 +6738,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130170694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130170689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1b3fb1ca212d4418daf57012380446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chemical: Cl
 --- !u!1001 &1134718884
 PrefabInstance:
   m_ObjectHideFlags: 0

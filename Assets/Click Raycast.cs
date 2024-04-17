@@ -8,6 +8,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     Camera cam;
     Vector3 pos = new Vector3(0, 0, 0);
+
+    string currentHeldChemical = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,11 @@ public class NewBehaviourScript : MonoBehaviour
             if(Physics.Raycast(ray, out RaycastHit hit, maxDistance))
             {
                 Debug.Log(hit.collider.gameObject.name + " was hit");
+                if(hit.collider.gameObject.CompareTag("Container"))
+                {
+                    Mixpotions mix = hit.collider.gameObject.GetComponent<Mixpotions>();
+                    Debug.Log("It was a container with " + mix.chemical);
+                }
             }
         }
        
