@@ -8,6 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     Camera cam;
     Vector3 pos = new Vector3(0, 0, 0);
+    public GameObject door;
 
     string chemical1 = "";
     string chemical2 = "";
@@ -48,16 +49,34 @@ public class NewBehaviourScript : MonoBehaviour
                 }
             }
         }
+        
 
         if((chemical1 == "Blue" &&  chemical2 == "Green") || (chemical1 == "Green" && chemical2 == "Blue"))
         {
             Debug.Log("solved!");
+            door.SetActive(false);
+
         }
-        else if(chemical1 != "" && chemical2 != "")
+        else if((chemical1 != "" && chemical2 != "") && ((chemical1 != "Blue" && chemical2 != "Green") || (chemical1 != "Green" && chemical2 != "Blue")))
         {
             Debug.Log("wrong!");
+            chemical1 = "";
+            chemical2 = "";
         }
-       
+
+        /*if ((chemical1 == "Black" && chemical2 == "Green") || (chemical1 == "Green" && chemical2 == "Black"))
+        {
+            Debug.Log("wrong!");
+            door.SetActive(false);
+
+        }
+        else if (chemical1 != "" && chemical2 != "")
+        {
+            Debug.Log("wrong!");
+            chemical1 = "";
+            chemical2 = "";
+        }*/
+        
     }
 
 
