@@ -9,7 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
     Camera cam;
     Vector3 pos = new Vector3(0, 0, 0);
 
-    string currentHeldChemical = "";
+    string chemical1 = "";
+    string chemical2 = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +34,28 @@ public class NewBehaviourScript : MonoBehaviour
                 Debug.Log(hit.collider.gameObject.name + " was hit");
                 if(hit.collider.gameObject.CompareTag("Container"))
                 {
-                    Mixpotions mix = hit.collider.gameObject.GetComponent<Mixpotions>();
+                    Chemicalspotions mix = hit.collider.gameObject.GetComponent<Chemicalspotions>();
                     Debug.Log("It was a container with " + mix.chemical);
+
+                    if(chemical1 == "")
+                    {
+                        chemical1 = mix.chemical;
+                    }
+                    else if(chemical2 == "")
+                    {
+                        chemical2 = mix.chemical;
+                    }
                 }
             }
+        }
+
+        if((chemical1 == "Blue" &&  chemical2 == "Green") || (chemical1 == "Green" && chemical2 == "Blue"))
+        {
+            Debug.Log("solved!");
+        }
+        else if(chemical1 != "" && chemical2 != "")
+        {
+            Debug.Log("wrong!");
         }
        
     }

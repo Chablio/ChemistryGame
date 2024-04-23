@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chemicalspotions : MonoBehaviour
 {
-    public void InputChemicalspotions(string Blue, string Red, string Green)
+    public string chemical;
+    //public void InputChemicalspotions(string Blue, string Red, string Green)
 }
 

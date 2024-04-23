@@ -26,7 +26,7 @@ public class Dooropener : MonoBehaviour
         }
         else
         {
-            Debug.Log("Chemicals do not match. Door remains closed")
+            Debug.Log("Chemicals do not match. Door remains closed");
         }
     }
  
