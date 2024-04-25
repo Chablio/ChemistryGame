@@ -10,6 +10,8 @@ public class NewBehaviourScript : MonoBehaviour
     Vector3 pos = new Vector3(0, 0, 0);
     public GameObject door;
 
+    public GameObject UICanvas;
+
     string chemical1 = "";
     string chemical2 = "";
     // Start is called before the first frame update
@@ -64,6 +66,10 @@ public class NewBehaviourScript : MonoBehaviour
             chemical2 = "";
         }
 
+        UICanvas.SetActive(false);
+
+        UICanvas.SetActive(true);
+
         /*if ((chemical1 == "Black" && chemical2 == "Green") || (chemical1 == "Green" && chemical2 == "Black"))
         {
             Debug.Log("wrong!");
@@ -76,7 +82,7 @@ public class NewBehaviourScript : MonoBehaviour
             chemical1 = "";
             chemical2 = "";
         }*/
-        
+
     }
 
 
